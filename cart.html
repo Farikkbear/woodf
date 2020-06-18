@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;display=swap">
+    <link rel="stylesheet" href="./libs/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="./libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./libs/select2/dist/css/select2.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/main.min.css" type="text/css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="burger"><span></span></div><a href="404.html"><img class="logo" src="./img/logo.png" alt=""></a>
+          <ul class="menu menu__header">
+            <li class="menu__item active"><a href="index.html">Головна</a></li>
+            <li class="menu__item"> <a href="fasade-trees.html">Meблеві фасади</a><span class="menu__arrow-left"></span><span class="menu__arrow-right"></span>
+              <ul class="menu__submenu">
+                <li class="menu__item menu__subitem"><a href="category-fasad-page.html">Висувні карго для кухні</a></li>
+                <li class="menu__item menu__subitem"><a href="">Сушки для посуду</a></li>
+              </ul>
+            </li>
+            <li class="menu__item"> <a href="furniture-fittings.html">Товари</a><span class="menu__arrow-left"></span><span class="menu__arrow-right"></span>
+              <ul class="menu__submenu">
+                <li class="menu__item menu__subitem"><a href="furniture-fittings.html">Фурнітура</a></li>
+                <li class="menu__item menu__subitem"><a href="">Сушки для посуду</a></li>
+              </ul>
+            </li>
+            <li class="menu__item"><a href="brands.html">Бренди</a></li>
+            <li class="menu__item"><a href="about-us.html">Про компанію</a></li>
+            <li class="menu__item"><a href="contacts.html">Контакти</a></li>
+          </ul>
+          <div class="user-nav">
+            <div class="user-nav__wrapper-btn"><a class="btn__login" href="" id="Login">Увійти</a><a class="btn__registration" href="" id="Registration">Зареєструватися</a></div>
+            <div class="card-wrapper"><a class="btn__card" href="#CardModal" id="Card">
+                <svg class="icon icon__card card-header">
+                  <use xlink:href="img/svg/sprite.svg#card"></use>
+                </svg><span class="number-coints">1</span></a></div>
+            <ul class="langs">
+              <li class="langs__item"><span>uk</span>
+                <ul class="langs__submenu">
+                  <li class="langs__item"> <a href="#">ru</a></li>
+                  <li class="langs__item"> <a href="#">en</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="cart-page">
+      <div class="container">
+        <div class="title">
+          <div class="title__big-text">Корзина</div>
+          <div class="title__small-text">Корзина</div>
+        </div>
+        <div class="cart-page__wrapper">
+          <div class="cart-item cart-header">
+            <div class="cart-header__col-photo">Фото</div>
+            <div class="cart-header__col-name">Назва товару</div>
+            <div class="cart-header__col-coint">Вартість одиниці</div>
+            <div class="cart-header__col-number">Кількість</div>
+            <div class="cart-header__col-total">Занальна вартасть</div>
+          </div>
+          <div class="cart-item cart-item--cart-page"><img class="cart-page__page-img cart-item__img--mn" src="./img/fasad.png" alt="">
+            <div class="name name__cart-page">Деревяні фасади DREWPOL Berlin (дуб) XHF</div>
+            <div class="article">Артикул: 
+              <div class="article__code">DP-XHF 1</div>
+            </div>
+            <div class="mark"><img src="./img/kessebohmer.png" alt=""></div>
+            <div class="price price__cart-page">250₴ <span class="price__parameter">/ 1м²</span></div>
+            <div class="cart-item__calc cart-page__calc count">
+              <button class="cart-item__down" id="down-calc" type="button"></button>
+              <input class="cart-item__center" id="calc" type="number" min="1" value="1">
+              <button class="cart-item__up" id="up-calc" type="button"></button>
+            </div>
+            <div class="cart-item__sum-price cart-page__sum-price"><span class="price__parameter">₴/ 1м²</span><img src="./img/close.png" alt=""></div>
+          </div>
+          <div class="cart-item cart-page__equal">
+            <div class="cart-item__sum-title cart-page__equal-title">Загальна сума товарів:</div>
+            <div class="cart-item__last-sum cart-page__equal-sum">5 000₴</div>
+          </div>
+        </div>
+        <div class="wrapper-link"><a class="cart-item__modal-link cart-item__modal-link--bgc-def" href="catalog.html">Продовжити покупку</a><a class="cart-item__modal-link cart-item__modal-link--bgc-green" href="ordering.html">Оформити замовлення</a></div>
+      </div>
+    </div>
+    <div class="subscription">
+      <div class="container">
+        <div class="subscription__wrapper">
+          <div class="subscription__wrapper-left">
+            <div class="subscription__title">Всі акції і новини в одному листі!</div>
+            <div class="subscription__subtitle">Підпишіться на нашу розсилку. У нас є багато цікавих пропозицій для Вас і ніякого спаму!</div>
+            <form action="">
+              <label class="subscription__label" for="">
+                <input class="subscription__input" type="text" placeholder="Ваш email">
+                <button class="btn subscription__btn">Надіслати
+                  <svg class="icon icon__success-icon ">
+                    <use xlink:href="img/svg/sprite.svg#success-icon"></use>
+                  </svg>
+                </button>
+              </label>
+            </form>
+          </div>
+          <div class="subscription__wrapper-right"><img src="/img/sub.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__item"><img class="logo logo__footer" src="./img/logo.png" alt="">
+            <div class="copyright"><span>© 2020. SVIT MEBLEVYH FASADIV</span></div>
+            <div class="social"><a class="social__item" href="#">
+                <svg class="icon icon__inst ">
+                  <use xlink:href="img/svg/sprite.svg#inst"></use>
+                </svg></a><a class="social__item" href="#">
+                <svg class="icon icon__facebook ">
+                  <use xlink:href="img/svg/sprite.svg#facebook"></use>
+                </svg></a></div>
+          </div>
+          <div class="footer__item">
+            <div class="menu menu__footer">
+              <ul class="menu__wrapper">
+                <li class="menu__item"><a href="index.html">Головна</a></li>
+                <li class="menu__item"><a href="fasade-trees.html">Meблеві фасади</a></li>
+                <li class="menu__item">Товари</li>
+                <li class="menu__item"><a href="delivery.html">Оплата та доставка</a></li>
+              </ul>
+              <ul class="menu__wrapper">
+                <li class="menu__item"><a href="brands.html">Бренди</a></li>
+                <li class="menu__item">Про компанію</li>
+                <li class="menu__item">Контаки</li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__item">
+            <div class="phone phone__footer">
+              <svg class="icon icon__phone ">
+                <use xlink:href="img/svg/sprite.svg#phone"></use>
+              </svg>
+              <div class="phone__wrapper-item">
+                <div class="phone__item">+380 68 858 86 99;</div>
+                <div class="phone__item">+380 68 858 86 99</div>
+              </div>
+            </div>
+            <div class="email">svitmeblevyhfasadiv@gmail.com
+              <svg class="icon icon__letter ">
+                <use xlink:href="img/svg/sprite.svg#letter"></use>
+              </svg>
+            </div>
+            <div class="address">Львів, вул. Жовківська 30
+              <svg class="icon icon__map ">
+                <use xlink:href="img/svg/sprite.svg#map"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="footer__item"><a class="btn btn__callback form__modal-link form__modal-link--n-under" href="#modalSub">Зателефонуйте мені</a></div>
+        </div>
+      </div>
+      <div id="btnTop"></div>
+    </div>
+    <div class="modal" id="modalLogin"><!-- 	Авторизации -->
+      <div class="modal__content">
+        <div class="modal__top">
+          <div class="modal-name">Увійти</div>
+          <div class="close">&times;</div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal-title">
+            <div class="modal-title__title">ласкаво просимо в особистий кабінет</div>
+            <div class="modal-title__subtitle">Перше ніж продовжити введіть будь ласка свої данні</div>
+          </div>
+          <form class="form">
+            <label class="form__wrapper" for="">
+              <input class="form__item" type="email" required><span class="form__title">Email</span>
+            </label>
+            <label class="form__wrapper form__wrapper--pass" data-component="pass-toggler" for="">
+              <input class="form__item password" data-role="pass-input" type="password" required><span class="form__title">Пароль</span>
+              <label class="form__toggle-pass">
+                <input class="eye-veiw" data-role="toggler" type="checkbox">
+                <div class="eye"></div>
+              </label><span class="form__toggle-pass"></span>
+            </label>
+            <div class="form-links"><a class="form__modal-link" href="#modalRegistration">Зареєструватися</a><a class="form__modal-link form__modal-link--n-under" href="#modalResetPass">Забули пароль?</a></div>
+            <button class="btn btn__modal" type="submit">Увійти</button>
+          </form>
+          <div class="modal__text">Або увійдіть через соціальні мережі</div>
+          <div class="form__icon-link">
+            <svg class="icon icon__facebook-color ">
+              <use xlink:href="img/svg/sprite.svg#facebook-color"></use>
+            </svg>
+            <svg class="icon icon__google-color ">
+              <use xlink:href="img/svg/sprite.svg#google-color"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modalRegistration"><!-- 	Регистрация -->
+      <div class="modal__content">
+        <div class="modal__top">
+          <div class="modal-name">Зареєструватися</div>
+          <div class="close">&times;</div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal-title">
+            <div class="modal-title__title">ласкаво просимо в особистий кабінет</div>
+            <div class="modal-title__subtitle">Перше ніж продовжити введіть будь ласка свої данні</div>
+          </div>
+          <form class="form">
+            <label class="form__wrapper" for="">
+              <input class="form__item" type="text" required><span class="form__title">Ім’я</span>
+            </label>
+            <label class="form__wrapper" for="">
+              <input class="form__item" type="emil" required><span class="form__title">Email</span>
+            </label>
+            <label class="form__wrapper form__wrapper--pass" data-component="pass-toggler" for="">
+              <input class="form__item password" data-role="pass-input" type="password" required><span class="form__title">Пароль</span>
+              <label class="form__toggle-pass">
+                <input class="eye-veiw" data-role="toggler" type="checkbox">
+                <div class="eye"></div>
+              </label>
+            </label>
+            <label class="form__wrapper form__wrapper--pass" data-component="pass-toggler" for="">
+              <input class="form__item password" data-role="pass-input" type="password" required><span class="form__title">Повторіть пароль</span>
+              <label class="form__toggle-pass">
+                <input class="eye-veiw" data-role="toggler" type="checkbox">
+                <div class="eye"></div>
+              </label>
+            </label>
+            <div class="form-links"><a class="form__modal-link" href="#modalLogin">Вже зареєстрованні?</a></div>
+            <input class="btn btn__modal" type="submit" value="Увійти">
+          </form>
+          <div class="modal__text">Або увійдіть через соціальні мережі</div>
+          <div class="form__icon-link">
+            <svg class="icon icon__facebook-color ">
+              <use xlink:href="img/svg/sprite.svg#facebook-color"></use>
+            </svg>
+            <svg class="icon icon__google-color ">
+              <use xlink:href="img/svg/sprite.svg#google-color"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modalRecaptchaReg"><!-- Модалка для каптчи -->
+      <div class="modal__content">
+        <div class="modal__top">
+          <div class="modal-name">Підтвердіть свої дії</div>
+          <div class="close">&times;</div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal__recaptcha-block"><span>Сдесь по макету рекаптча</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modalRegSuccess"><!-- Письмо подтверждения регистрации пароля -->
+      <div class="modal__content">
+        <div class="modal__top">
+          <div class="modal-name">Лист підтвердження</div>
+          <div class="close">&times;</div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal-title">
+            <div class="modal-title__subtitle--big">На вашу пошту відправлено код підтвердження. Перейдіть за посиланням у листі, щоб підтвердити процедуру реєстрації. Дякуємо!</div>
+          </div>
+          <div class="form-links"><a class="form__modal-link form__modal-link--center" href="#">Перейти на пошту</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modalResetPass"><!-- 	Востановление пароля -->
+      <div class="modal__content">
+        <div class="modal__top">
+          <div class="modal-name">Відновлення паролю</div>
+          <div class="close">&times;</div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal-title">
+            <div class="modal-title__title">Забули пароль?</div>
+            <div class="modal-title__subtitle">Введіть адресу електронної пошти для відновлення паролю</div>
+          </div>
+          <form class="form">
+            <label class="form__wrapper" for="">
+              <input class="form__item" type="emil" required><span class="form__title">Email</span>
+            </label>
+            <div class="form-links"><a class="form__modal-link form__modal-link--n-under" href="#modalRegistration">Зареєструватися</a><a class="form__modal-link form__modal-link--n-under" href="#modalLogin">Увійти</a></div><a class="btn btn__modal form__modal-link form__modal-link--n-under" href="#modalRegSuccess">Відновити</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modalResetPassSuccess"><!-- Письмо подтверждения востановление пароля -->
+      <div class="modal__content">
+        <div class="modal__top">
+          <div class="modal-name">Лист підтвердження</div>
+          <div class="close">&times;</div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal-title">
+            <div class="modal-title__subtitle--big">На вашу пошту відправлено код підтвердження. Перейдіть за посиланням у листі, щоб підтвердити процедуру відновлення паролю. Дякуємо!</div>
+          </div>
+          <div class="form-links form-links--center"><a class="form__modal-link form__modal-link--bgc" href="#modalResetPass">Відправити ще раз</a><a class="form__modal-link" href="#">Перейти на пошту</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-modal" id="CardModal">
+      <div class="card-modal__content">
+        <div class="card-modal__top">
+          <div class="modal-name">Корзина</div>
+          <div class="close">&times;</div>
+        </div>
+        <div class="card-modal__bottom">
+          <div class="cart-item"><img class="cart-item__img" src="./img/fasad.png" alt="">
+            <div class="name name__cart-item">Деревяні фасади DREWPOL Berlin (дуб) XHF</div>
+            <div class="price price__cart-item">250₴</div>
+            <div class="cart-item__calc count">
+              <button class="cart-item__down" id="down-calc" type="button"></button>
+              <input class="cart-item__center" id="calc" type="number" min="1" value="1">
+              <button class="cart-item__up" id="up-calc" type="button"></button>
+            </div>
+            <div class="cart-item__sum-price"></div>
+          </div>
+          <div class="cart-item"><img class="cart-item__img" src="./img/fasad.png" alt="">
+            <div class="name name__cart-item">Деревяні фасади DREWPOL Berlin (дуб) XHF</div>
+            <div class="price price__cart-item">250₴</div>
+            <div class="cart-item__calc count">
+              <button class="cart-item__down" id="down-calc" type="button"></button>
+              <input class="cart-item__center" id="calc" type="number" min="1" value="1">
+              <button class="cart-item__up" id="up-calc" type="button"></button>
+            </div>
+            <div class="cart-item__sum-price"></div>
+          </div>
+          <div class="cart-item cart-item__equal-sum">
+            <div class="cart-item__sum-title">Загальна сума товарів:</div>
+            <div class="cart-item__last-sum">5 000₴</div>
+          </div>
+          <div class="wrapper-link wrapper-link__cart-item"><a class="cart-item__modal-link cart-item__modal-link--underline cart-item__modal-link--bgc-trans" href="cart.html">Перейти до корзини</a><a class="cart-item__modal-link cart-item__modal-link--bgc-green" href="ordering.html">Оформити замовлення</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modalSub"><!-- 	Авторизации -->
+      <div class="modal__content">
+        <div class="modal__top">
+          <div class="modal-name">Зателефонуйте мені</div>
+          <div class="close">&times;</div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal-title">
+            <div class="modal-title__title">Введіть будь ласка свої данні</div>
+            <div class="modal-title__subtitle">Щоб ми могли зв’язатися з вами</div>
+          </div>
+          <form class="form">
+            <label class="form__wrapper" for="">
+              <input class="form__item" type="text" required><span class="form__title">Ім’я</span>
+            </label>
+            <label class="form__wrapper form__wrapper--pass" for="">
+              <input class="form__item tel" type="tel" required><span class="form__title">Hомер телефону</span>
+            </label>
+            <button class="btn btn__modal" type="submit">надіслати</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="orderOneClick">
+      <div class="modal__content">
+        <div class="modal__top">
+          <div class="modal-name">Замовити в один клік</div>
+          <div class="close">&times;</div>
+        </div>
+        <div class="modal__bottom">
+          <form class="form order-click">
+            <div class="order-click__right cart-item"><img class="cart-item__img" src="./img/fasad.png" alt="">
+              <div class="name name__cart-item">Деревяні фасади DREWPOL Berlin (дуб) XHF</div>
+              <div class="article">Артикул: 
+                <div class="article__code">DP-XHF 1</div>
+              </div>
+              <div class="price price__cart-item">250₴ <span class="price__parameter">/ шт</span></div>
+              <div class="cart-item__calc count">
+                <button class="cart-item__down" id="down-calc" type="button"></button>
+                <input class="cart-item__center" id="calc" type="number" min="1" value="1">
+                <button class="cart-item__up" id="up-calc" type="button"></button>
+              </div>
+              <div class="cart-item__sum-price"></div>
+            </div>
+            <div class="order-click__left">
+              <div class="modal-title">
+                <div class="modal-title__subtitle">Для отримання інформації по даному товару, заповніть наступні поля</div>
+              </div>
+              <form class="form">
+                <label class="form__wrapper" for="">
+                  <input class="form__item" type="text" required><span class="form__title">Ім’я</span>
+                </label>
+                <label class="form__wrapper form__wrapper--pass" for="">
+                  <input class="form__item tel" type="tel" required><span class="form__title">Hомер телефону</span>
+                </label>
+                <label class="form__wrapper form__wrapper--pass" for="">
+                  <input class="form__item" type="email" required><span class="form__title">Email</span>
+                </label>
+                <button class="btn btn__modal btn__modal--bgc-green" type="submit">Оформити замовлення</button>
+              </form>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="orderOneClick2">
+      <div class="modal__content">
+        <div class="modal__top">
+          <div class="modal-name">Замовити в один клік</div>
+          <div class="close">&times;</div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal-title">
+            <div class="modal-title__subtitle">Для отримання інформації по даному товару, заповніть наступні поля</div>
+          </div>
+          <form class="form form--m form-click">
+            <label class="form__wrapper" for="">
+              <input class="form__item" type="text" required><span class="form__title">Ім’я</span>
+            </label>
+            <label class="form__wrapper form__wrapper--pass" for="">
+              <input class="form__item tel" type="tel" required><span class="form__title">Hомер телефону</span>
+            </label>
+            <label class="form__wrapper form__wrapper--pass" for="">
+              <input class="form__item" type="email" required><span class="form__title">Email</span>
+            </label>
+            <label class="form__wrapper form__wrapper--pass" for="">
+              <textarea class="form__item" name="" rows="10" placeholder="Коментар до замовлення"></textarea>
+            </label>
+            <button class="btn btn__modal btn__modal--bgc-green" type="submit">Надіслати</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./libs/jquery/jquery-3.4.1.min.js"></script>
+    <script src="./libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="./libs/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="./libs/select2/dist/js/select2.min.js"></script>
+    <script src="./libs/maskedinput/dist/jquery.maskedinput.min.js"></script>
+    <script src="./libs/jquery/jquery.ui.touch-punch.min.js"></script>
+    <script src="./js/common.js"></script>
+  </body>
+</html>
